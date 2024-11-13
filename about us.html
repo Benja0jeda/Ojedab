@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/about us.css">
+    <title>Sobre Nosotros - Ojedab</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1 id="title">Sobre Nosotros</h1>
+        <p id="description">Ojedab es una empresa líder en el desarrollo de software a medida. En nuestro equipo nos
+            especializamos en crear soluciones tecnológicas innovadoras que se adaptan a las necesidades específicas de
+            nuestros clientes a través del desarrollo de programas web. En nuestra empresa transformamos desafíos en
+            soluciones eficientes, impulsando el éxito de nuestros clientes a través de la tecnología.</p>
+
+        <div class="team-container">
+            <div class="card">
+                <div class="card-border-top"></div>
+                <div class="img">
+                    <img src="imgs/about us/Benjamín.jpeg" alt="Benjamín Ojeda">
+                </div>
+                <span>Benjamín Ojeda</span>
+                <p class="job">Fundador y CEO</p>
+                <button onclick="window.open('https://www.linkedin.com', '_blank')">LinkedIn</button>
+            </div>
+        </div>
+    </div>
+
+    <button class="language-toggle" onclick="changeLanguage()">EN</button>
+
+    <script>
+        function changeLanguage() {
+            const title = document.getElementById('title');
+            const description = document.getElementById('description');
+            const languageToggle = document.querySelector('.language-toggle');
+            const jobTitles = document.querySelectorAll('.job');
+
+            if (title.innerHTML === 'Sobre Nosotros') {
+                title.innerHTML = 'About Us';
+                description.innerHTML = 'Ojedab is a leading company in custom software development. Our team specializes in the creation of innovative technological solutions that adapt to the specific needs of our clients through the development of web programs. In our company, we transform challenges into efficient solutions, driving the success of our clients through technology.';
+                languageToggle.innerHTML = 'ES';
+                jobTitles[0].innerHTML = 'Founder and CEO';
+                jobTitles[1].innerHTML = 'Chief Technology Officer';
+                jobTitles[2].innerHTML = 'Head of Development';
+            } else {
+                title.innerHTML = 'Sobre Nosotros';
+                description.innerHTML = 'Ojedab es una empresa líder en el desarrollo de software a medida. En nuestro equipo nos especializamos en crear soluciones tecnológicas innovadoras que se adaptan a las necesidades específicas de nuestros clientes a través del desarrollo de programas web. En nuestra empresa transformamos desafíos en soluciones eficientes, impulsando el éxito de nuestros clientes a través de la tecnología.';
+                languageToggle.innerHTML = 'EN';
+                jobTitles[0].innerHTML = 'Fundador y CEO';
+                jobTitles[1].innerHTML = 'Directora de Tecnología';
+                jobTitles[2].innerHTML = 'Jefe de Desarrollo';
+            }
+        }
+    </script>
+</body>
+
+</html>
